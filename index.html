@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro Clock</title>
+
+        <!-- External Links -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container p-3" id="clock-container">
+            <div
+                class="d-flex justify-content-center align-items-center"
+                id="countdown-timer"
+            >
+                <span id="countdown-time-text">00:00</span>
+            </div>
+            <br />
+            <div id="user-actions" class="font-weight-bold">
+                <p
+                    class="text-center"
+                    style="font-size: 30px"
+                    id="session-number"
+                >
+                    Session 1
+                </p>
+                <div id="timer-config-panel">
+                    <div class="row pb-3">
+                        <div class="col d-flex justify-content-center">
+                            <div class="text-center">
+                                <p style="color: #00b7eb">
+                                    <small>Session Time</small>
+                                </p>
+                                <p><span id="session-time">0</span> Min</p>
+                                <div>
+                                    <button
+                                        id="decrease-session-time-button"
+                                        type="button"
+                                        class="btn btn-dark ml-1 btn-sm"
+                                        onclick="toggleTime(this)"
+                                    >
+                                        -
+                                    </button>
+                                    <button
+                                        id="increase-session-time-button"
+                                        type="button"
+                                        class="btn btn-dark ml-1 btn-sm"
+                                        onclick="toggleTime(this)"
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="text-center">
+                                <p style="color: #ff1744">
+                                    <small>Break Time</small>
+                                </p>
+                                <p><span id="break-time">0</span> Min</p>
+                                <div>
+                                    <button
+                                        id="decrease-break-time-button"
+                                        type="button"
+                                        class="btn btn-dark ml-1 btn-sm"
+                                        onclick="toggleTime(this)"
+                                    >
+                                        -
+                                    </button>
+                                    <button
+                                        id="increase-break-time-button"
+                                        type="button"
+                                        class="btn btn-dark ml-1 btn-sm"
+                                        onclick="toggleTime(this)"
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="action-buttons"
+                    class="mt-2"
+                    style="text-align: center"
+                >
+                    <button
+                        type="button"
+                        class="btn btn-dark mr-3"
+                        id="toggle-clock-button"
+                        onclick="toggleClockState()"
+                    >
+                        Start
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-dark ml-3"
+                        onclick="resetClock()"
+                    >
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Popper -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script
+            src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./app.js"></script>
+    </body>
+</html>

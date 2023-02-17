@@ -1,29 +1,39 @@
 body {
-    background-color: burlywood;
+    background-color: rgb(135, 222, 200);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 100vw;
+    margin: 0 auto;
+    max-height: 100vh;
 }
 
 #clock-container {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
-    height: 460px;
-    width: 260px;
-    background-color: black;
-    border-radius: 5px;
+    position: relative;
+    justify-self: center;
+    align-self: center;    
+    margin-top: 20vh;
+    height: 50vh;
+    margin-bottom: 20vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    background-color: rgb(116, 173, 223);
+    border-radius: 25px;
     opacity: 0.6;
 }
 
 #countdown-timer {
     background-color: white;
     height: 40%;
-    border: 10px solid #00b7eb;
+    border: 10px solid #0f4a5b;
+    border-radius: 25px;
+    
 }
 
 #user-actions {
     height: 45%;
     color: white;
+    border-radius: 25px;
 }
 
 #countdown-time-text {
@@ -34,4 +44,5 @@ body {
 #timer-config-panel {
     border-top: 1px dotted white;
     border-bottom: 1px dotted white;
+        border-radius: 25px;
 }
